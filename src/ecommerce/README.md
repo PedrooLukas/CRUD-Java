@@ -14,48 +14,6 @@ Sistema completo de e-commerce desenvolvido em Java aplicando todos os princípi
 - ✅ Validações completas
 - ✅ Interface de menu interativa
 
-## 🎯 Princípios OOP Aplicados
-
-### 1. **Herança**
-- `User` (classe abstrata)
-  - `Customer` (cliente com CPF, endereço, pedidos)
-  - `Admin` (administrador com permissões)
-- `Product` (classe abstrata)
-  - `PhysicalProduct` (produto físico com estoque, peso, dimensões)
-  - `DigitalProduct` (produto digital com download, validade)
-
-### 2. **Polimorfismo**
-- Métodos abstratos implementados de forma diferente:
-  - `getUserType()` retorna tipo específico do usuário
-  - `getProductType()` retorna tipo específico do produto
-  - `calculateShipping()` calcula frete diferente para cada tipo
-  - `displayInfo()` e `displayProductDetails()` mostram informações específicas
-
-### 3. **Encapsulamento**
-- Todos os atributos são privados
-- Acesso controlado via getters e setters
-- Validações nos setters quando necessário
-
-### 4. **Sobrecarga (Overloading)**
-- `calculateDiscount(int percentage)` - desconto por porcentagem
-- `calculateDiscount(BigDecimal amount)` - desconto por valor fixo
-- `applyDiscount(int percentage)` - aplica desconto percentual
-- `applyDiscount(BigDecimal amount)` - aplica desconto fixo
-- `hasStock()` - verifica se há estoque
-- `hasStock(int quantity)` - verifica se há estoque suficiente
-
-### 5. **Composição**
-- `Order` contém lista de `OrderItem`
-- `OrderItem` contém `Product`
-- `Customer` contém lista de `Order`
-
-### 6. **Abstração**
-- Classes abstratas: `User`, `Product`
-- Interfaces: `Repository`, `ProductRepository`, `UserRepository`, `OrderRepository`
-
-### 7. **Interfaces e Implementação**
-- Interface `Repository<T>` genérica com operações CRUD
-- Implementações concretas: `ProductRepositoryImpl`, `UserRepositoryImpl`, `OrderRepositoryImpl`
 
 ## 📁 Estrutura do Projeto
 
@@ -89,18 +47,6 @@ ecommerce/
 └── ECommerceApplication.java (Main)
 ```
 
-## 🚀 Como Executar
-
-### Compilar:
-```bash
-cd C:\Users\pedro\IdeaProjects\hello-world
-javac -encoding UTF-8 -d out src/ecommerce/model/*.java src/ecommerce/repository/*.java src/ecommerce/repository/impl/*.java src/ecommerce/service/*.java src/ecommerce/util/*.java src/ecommerce/*.java
-```
-
-### Executar:
-```bash
-java -cp out ecommerce.ECommerceApplication
-```
 
 ## 📊 Dados de Exemplo
 
@@ -165,7 +111,7 @@ O sistema já vem com dados inicializados:
 - Visualizar histórico de pedidos
 - Calcular receita total
 
-## 🎓 Conceitos Demonstrados
+## 🎓 Abordagem e conceitos do Java usados:
 
 - ✅ Classes e Objetos
 - ✅ Herança e Classes Abstratas
